@@ -68,8 +68,6 @@ body {
     width: 90%;
 }
 
-#slide-background p {
-}
 
 #back-button, #forward-button {
     height: 15vh;
@@ -104,16 +102,16 @@ img.fade-in, p.fade-in {
 .image-selection-button {
     width: 20px;
     height: 20px;
-    border: 2px solid #000; /* Set the border to create the circular shape */
+    border: 2px solid rgb(109, 32, 33); /* Set the border to create the circular shape */
     translate: 0px -30vh;
     border-radius: 50%; /* Make the border-radius 50% to create a circle */
     background: transparent; /* Make the background transparent */
 }
 
 .image-selection-button:hover {
-    background: black;
+    background: #000000bf;
 }
 
 .current-selection-button {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(154, 45, 47, 0.33);
 }
