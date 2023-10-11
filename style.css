@@ -1,0 +1,119 @@
+:root {
+    font-size: 10px;
+    --sunset-color: #fcc0b6;
+    --beach-color: #fdead1;
+}
+
+@font-face {
+    font-family: relaxingFont;
+    src: url(HotSummer-Personal\ Use.ttf);
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--sunset-color), var(--beach-color));
+    background-repeat: no-repeat;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    font-family: relaxingFont, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+/* Header */
+#introduction-text {
+    font-size: 4rem;
+    height: 10%;
+}
+
+/* Body */
+#slides-and-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75%;
+    width: 45%;
+}
+
+/* Footer */
+#slide-selector {
+    height: 15%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#slide-background {
+    height: 80%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 0 2.5vw;
+}
+
+#slide-background img {
+    height: 100%;
+    width: 90%;
+}
+
+#slide-background p {
+}
+
+#back-button, #forward-button {
+    height: 15vh;
+    width: 6.5vw;
+    border-radius: 40px;
+    border: 3px solid #9a2d2f84;
+    background-size: cover;
+}
+
+#back-button {
+    background-image: url(./pictures/leftSeashells.jpeg);
+}
+
+#forward-button {
+    background-image: url(./pictures/rightSeashells.jpeg);
+}
+
+img, #slide-background p {
+    opacity: 1; /* fully visible by default */
+    transition: opacity 1s; /* fade in or out in 1 second */
+}
+  
+img.fade-out, p.fade-out {
+    opacity: 0; /* fully transparent when fade-out class is added */
+}
+
+img.fade-in, p.fade-in {
+    opacity: 0;
+    transition: opacity 0.75s;
+}
+
+.image-selection-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000; /* Set the border to create the circular shape */
+    translate: 0px -30vh;
+    border-radius: 50%; /* Make the border-radius 50% to create a circle */
+    background: transparent; /* Make the background transparent */
+}
+
+.image-selection-button:hover {
+    background: black;
+}
+
+.current-selection-button {
+    background: rgba(0, 0, 0, 0.5);
+}
